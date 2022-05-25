@@ -21,8 +21,7 @@ export default function SignUpPage(props) {
     e.preventDefault()
     const formData = new FormData(); //from the browser
     formData.append('photo', selectedFile);
-    formData.append('username', state.username);
-    formData.append('email', state.email);
+   
     for (let fieldName in state){
       formData.append(fieldName, state[fieldName])
     }

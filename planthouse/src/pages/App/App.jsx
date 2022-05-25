@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Feed from '../FeedPage/FeedPage'; 
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
@@ -37,14 +38,9 @@ function App() {
 
   return (
     <Routes>
-      <Route
-        path="/login"
-        element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-      />
-      <Route
-        path="/signup"
-        element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-      />
+      <Route path="/" element={< Feed />} />
+      <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
+      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );
