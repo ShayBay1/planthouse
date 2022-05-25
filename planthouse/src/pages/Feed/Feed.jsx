@@ -1,11 +1,11 @@
 import React, {useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-// import PageHeader from "../../components/Header/Header";
+import PageHeader from "../../components/Header/Header";
 import AddPostForm from "../../components/AddPostForm/AddPostForm";
-// import PostGallery from "../../components/PostGallery/PostGallery";
-// import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-// import Loading from "../../components/Loader/Loader";
-// import * as postsAPI from "../../utils/postApi";
+import PostFeed from "../../components/PostFeed/PostFeed";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import Loading from "../../components/Loader/Loader";
+import * as postsAPI from "../../utils/postApi";
 
 export default function Feed({user, handleLogout}) {
     console.log(postsAPI, " <-- postsAPI")
@@ -13,6 +13,7 @@ export default function Feed({user, handleLogout}) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
   
+
     async function handleAddPost(post) {
       try {
         setLoading(true);
