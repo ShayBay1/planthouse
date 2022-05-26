@@ -18,8 +18,8 @@ export default function PageHeader({ user, handleLogout }) {
         <Link to={`/${user?.username}`}>
           <Image
             src={
-              user?.photoUrl
-                ? user?.photoUrl
+              user ?
+              user.photoUrl
                 : "https://react.semantic-ui.com/images/wireframe/square-image.png"
             }
             avatar

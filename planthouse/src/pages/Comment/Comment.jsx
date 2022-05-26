@@ -6,10 +6,6 @@ import PostFeed from "../../components/PostFeed/PostFeed";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../components/Loader/Loader";
 import * as postsAPI from "../../utils/postApi";
-import * as commentAPI from "../../utils/commentApi";
-
-
-
 
 export default function Feed({user, handleLogout}) {
     console.log(postsAPI, " <-- postsAPI")
@@ -30,29 +26,9 @@ export default function Feed({user, handleLogout}) {
         setError(err.message);
       }
     }
-    async function addComment(postId){
+    async function getComments() {
       try {
-        const data = await commentAPI.addComment(postId)
-        getPosts()
-        console.log(data,"<--------response from the server when adding comment")
-      } catch(err){
-        console.log(err)
-        setError(err.message)
-      }
-    }
-    
-    async function removeComment(commentId){
-      try{
-        const data = await commentAPI.removeComment(commentId);
-        getPosts()
-      } catch(err){
-        console.log(err);
-        setError(err.message);
-      }
-    }
-    async function getPosts() {
-      try {
-        const data = await postsAPI.getAll();
+        const data = await postsAPI.getElementById();
         console.log(data, " this is data,");
         setPosts([...data.posts]);
         setLoading(false);
@@ -62,7 +38,7 @@ export default function Feed({user, handleLogout}) {
       }
     }
     useEffect(() => {
-      getPosts();
+      getComments();
     }, []);
   
     if (error) {
@@ -97,13 +73,7 @@ export default function Feed({user, handleLogout}) {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column style={{ maxWidth: 450 }}>
-            <PostFeed 
-            posts = {posts} 
-            numPhotosCol={1} 
-            loading = {loading}
-            addComment = {addComment}
-            removeComment = {removeComment} 
-            />
+            <PostFeed posts = {posts} numPhotosCol={1} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
