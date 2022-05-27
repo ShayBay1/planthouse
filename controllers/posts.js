@@ -55,6 +55,5 @@ async function index(req, res){
         const posts = await Post.find({}).populate('user').exec()
         res.status(200).json({posts})
     } catch(err){
-
     }
 }
