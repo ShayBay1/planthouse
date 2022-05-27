@@ -16,7 +16,6 @@ export function create(post) {
     })
   }
 
-
   export function getAll() {
     return fetch(BASE_URL, {
       headers: {
@@ -25,6 +24,6 @@ export function create(post) {
     })
     .then(res => {
       if(res.ok) return res.json();
-      throw new Error('Bad Credentials! CHECK THE SERVER TERMINAL!')
+      throw new Error('CHECK THE SERVER TERMINAL')
     })
   }
