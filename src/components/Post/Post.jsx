@@ -30,7 +30,7 @@ function PostCard({ post, isProfile, removeComment, addComment, user }) {
       <Card.Content>
         <Card.Description>{post.caption}</Card.Description>
       </Card.Content>
-      var Comment: {
+      {/* var Comment: {
     new (data?: string): Comment;
     prototype: Comment;
 <Comment.Group>
@@ -51,7 +51,7 @@ function PostCard({ post, isProfile, removeComment, addComment, user }) {
       </Comment.Content>
     </Comment> 
 </Comment.Group>
-      }      
+      }       */}
     </Card>
   );
 }
