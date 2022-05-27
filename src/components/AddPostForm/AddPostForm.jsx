@@ -26,6 +26,7 @@ export default function AddPostForm(props){
     formData.append('caption', state.caption)
     props.handleAddPost(formData); 
   }
+  console.log('in post form');
   return (
     
     <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
