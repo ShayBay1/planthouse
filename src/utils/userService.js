@@ -5,7 +5,10 @@ const BASE_URL = "/api/users/";
 // NOTE THIS IS configured to send of a multi/part form request
 // aka photo
 function signup(user) {
+<<<<<<< HEAD
   console.log(user);
+=======
+>>>>>>> working
   return (
     fetch(BASE_URL + "signup", {
       method: "POST",
@@ -26,7 +29,10 @@ function signup(user) {
 }
 
 function getUser() {
+<<<<<<< HEAD
   console.log('get user');
+=======
+>>>>>>> working
   return tokenService.getUserFromToken();
 }
 

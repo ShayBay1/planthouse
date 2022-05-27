@@ -20,6 +20,7 @@ export default function LoginPage(props) {
     });
   }
   async function handleSubmit(e) {
+<<<<<<< HEAD
     console.log('in');
     e.preventDefault();
     try {
@@ -28,6 +29,15 @@ export default function LoginPage(props) {
     } catch (err) {
       setError(err.message);
       console.log(err);
+=======
+    e.preventDefault();
+    try {
+      await userService.login(state);
+      props.handleSignUpOrLogin();
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+>>>>>>> working
     }
   }
   return (

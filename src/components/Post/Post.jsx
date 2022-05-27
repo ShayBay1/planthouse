@@ -1,15 +1,34 @@
 import React from "react";
+<<<<<<< HEAD
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function PostCard({ post, isProfile, removeComment, addComment, user }) {
 
+=======
+import { Card, Icon, Image, Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+
+
+function PostCard({ post, isProfile, removePost, removeComment, addComment, user }) {
+  function handleOnClick(){
+    console.log("initial button was clicked")
+    removePost(post._id)
+  }
+  
+>>>>>>> working
   return (
     <Card key={post._id} raised>
       {isProfile ? (
         ""
       ) : (
         <Card.Content textAlign="left">
+<<<<<<< HEAD
+=======
+          <Container textAlign="right">
+          <Icon name={"x"} size="large" color="red" onClick={handleOnClick}></Icon>
+          </Container>
+>>>>>>> working
           <Card.Header>
             <Link to={`/${post.user.username}`}>
               <Image
@@ -30,6 +49,7 @@ function PostCard({ post, isProfile, removeComment, addComment, user }) {
       <Card.Content>
         <Card.Description>{post.caption}</Card.Description>
       </Card.Content>
+<<<<<<< HEAD
       {/* var Comment: {
     new (data?: string): Comment;
     prototype: Comment;
@@ -52,6 +72,8 @@ function PostCard({ post, isProfile, removeComment, addComment, user }) {
     </Comment> 
 </Comment.Group>
       }       */}
+=======
+>>>>>>> working
     </Card>
   );
 }

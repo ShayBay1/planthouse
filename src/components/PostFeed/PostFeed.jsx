@@ -3,8 +3,17 @@ import { Card, Dimmer, Segment, Image  } from 'semantic-ui-react'
 import PostCard from '../Post/Post';
 import Loading from '../Loader/Loader';
 
+<<<<<<< HEAD
 export default function PostFeed({posts, numPhotosCol, isProfile, loading, user, addComment, removeComment}){
 
+=======
+export default function PostFeed({posts, numPhotosCol, isProfile, loading, user, deletePost, addComment, removeComment}){
+console.log(posts);
+function removePost(postId){
+  console.log("initial button was clicked")
+  deletePost(postId)
+}
+>>>>>>> working
     return (
         <Card.Group itemsPerRow={numPhotosCol} stackable>
         {loading ? (
@@ -22,6 +31,10 @@ export default function PostFeed({posts, numPhotosCol, isProfile, loading, user,
               key={post._id}
               isProfile={isProfile}
               user={user}
+<<<<<<< HEAD
+=======
+              removePost={removePost}
+>>>>>>> working
               addComment={addComment}
               removeComment={removeComment}
             />

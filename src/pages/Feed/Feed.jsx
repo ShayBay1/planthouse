@@ -30,6 +30,23 @@ export default function Feed({user, handleLogout}) {
         setError(err.message);
       }
     }
+<<<<<<< HEAD
+=======
+
+    async function deletePost(postId) {
+      console.log('delete: ', postId);
+      try {
+        setLoading(true);
+        const data = await postsAPI.remove(postId); 
+        console.log(data, " this is 'data' a response from the server, in deletePost");
+        getPosts();
+        setLoading(false);
+      } catch (err) {
+        console.log(err);
+        setError(err.message);
+      }
+    }
+>>>>>>> working
     async function addComment(postId){
       try {
         const data = await commentAPI.addComment(postId)
@@ -103,6 +120,10 @@ export default function Feed({user, handleLogout}) {
             loading = {loading}
             addComment = {addComment}
             removeComment = {removeComment} 
+<<<<<<< HEAD
+=======
+            deletePost= {deletePost}
+>>>>>>> working
             />
           </Grid.Column>
         </Grid.Row>
