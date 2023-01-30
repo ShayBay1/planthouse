@@ -1,6 +1,6 @@
 
 THIS IS PLANTHOUSE
-An app that lets plant lovers can come together and help  eachother grow!
+An app that allows plant lovers to come together and help eachother grow!
 
 <img src="https://i.imgur.com/DWKd0w8.png">
 <img src="https://i.imgur.com/ZB6Gham.png">
