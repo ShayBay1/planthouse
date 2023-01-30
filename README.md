@@ -9,13 +9,13 @@ An app that allows plant lovers to come together and help eachother grow!
 the wireframe:
 <img src="https://i.imgur.com/dLaHkka.png">
 
-For I wanted to create a community for plant lovers to connect.
+For this project I envisioned a community where plant lovers can connect with one another and share their progress, obsticals, and insights with one another and grow together.
 Users can create an account, post their picture and get input from others.
 
-Planthouse is a full stack MERN app meaning that it uses MongoDB, Express, React, and Node.Js.
+Planthouse is a full stack MERN app; MongoDB, Express, React, and Node.Js.
 
 Go ahead annd join today! 
-<"link">
+https://main.d36txnotc17em9.amplifyapp.com 
 
 Git repo:
 https://github.com/ShayBay1/planthouse
